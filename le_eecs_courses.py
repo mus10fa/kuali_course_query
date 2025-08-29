@@ -2,7 +2,7 @@ import requests
 import json
 
 # Your API token (replace with your actual token)
-token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NzU1M2I4MTY4NDkzMDUxYTY4M2MxNCIsImlzcyI6Imt1YWxpLmNvIiwiZXhwIjoxNzg0MDU1NjA4LCJpYXQiOjE3NTI1MTk2MDh9.TyeX1xYsJyOuSNl7XHK-PuEMkN34eujLuNIlVeCTlb4"
+token = ""
 
 # API endpoint
 url = "https://york-sbx.kuali.co/api/v0/cm/search?index=courses_latest&limit=1000"
@@ -39,3 +39,4 @@ if response.status_code == 200:
 else:
     print(f"Request failed with status code {response.status_code}")
     print(response.text)
+
