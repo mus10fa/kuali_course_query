@@ -1,0 +1,46 @@
+{
+  "name": "json-mcp-server",
+  "productName": "JSON MCP Server",
+  "version": "1.0.6",
+  "description": "Fast, easy and reliable JSON MCP Server.",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "json-mcp-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "test:unit": "npx scripterio --folder=\"__tests__\""
+  },
+  "keywords": [
+    "JSON",
+    "JSON MCP",
+    "Application"
+  ],
+  "author": "Vadym Nastoiashchyi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadimNastoyashchy/json-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VadimNastoyashchy/json-mcp/issues"
+  },
+  "homepage": "https://github.com/VadimNastoyashchy/json-mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "zod-to-json-schema": "^3.23.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "prettier": "3.0.3",
+    "scripterio": "^1.0.6",
+    "typescript": "^5.3.3"
+  }
+}

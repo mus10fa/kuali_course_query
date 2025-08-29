@@ -1,0 +1,14 @@
+import json
+
+# Load the raw JSON file
+with open('course-query-system/courses.json', 'r') as infile:
+    raw_courses = json.load(infile)
+
+# Convert to Postman format using the 'pid' field
+converted = [{"courseId": course["pid"]} for course in raw_courses if "pid" in course]
+
+# Save to a new file
+with open('postman_course_ids.json', 'w') as outfile:
+    json.dump(converted, outfile, indent=2)
+
+print("✅ Converted JSON saved as 'postman_course_ids.json'")

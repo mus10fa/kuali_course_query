@@ -1,0 +1,13 @@
+{
+  "port": 3001,
+  "datasets": [
+    {
+      "name": "courses",
+      "path": "courses.json"
+    },
+    {
+      "name": "le_courses_20250722_130438",
+      "path": "le_courses_20250722_130438.json"
+    }
+  ]
+}
