@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Configuration
 const MCP_BASE_URL = 'http://localhost:3001'; // MCP server URL
-const GOOGLE_API_KEY = 'AIzaSyB0CeJObJKK_8UX4x1w7KHJWXMhx7t77kQ';
+const GOOGLE_API_KEY = '';
 
 // Helper function to fetch course data by code
 async function fetchCourseByCode(code) {
@@ -270,4 +270,5 @@ app.get('/api/health', (req, res) => {
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
+
 });
